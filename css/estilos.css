@@ -210,3 +210,10 @@ footer ul li{
         justify-items: center;
     }
 }
+h3{
+    font-size: 1rem;
+    transition: all .5s ease ;
+}
+.subCrece:hover{
+    font-size: 1.5rem;
+}
