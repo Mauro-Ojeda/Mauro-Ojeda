@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family:'Roboto', sans-serif; 
+    text-decoration: none;
+    list-style: none;
+}
+.gridCont{
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer'
+    ;
+}
+/* Header */
+header{
+    grid-area:header;
+    background-color: aquamarine;
+    padding: 10px;
+}
+.titulo{
+    font-size:3.4rem;
+    color: rgb(57, 52, 154);
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.logo{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.logo img{
+    width: 3rem;
+    height: 3rem;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+nav a{
+    background-color: rgb(68, 218, 173);
+    margin: 1rem;
+    padding:5px;
+}
+nav ul{
+    list-style: none;
+    text-decoration: none;
+}
+.navLi{
+    display: inline-block;
+}
+.navLi a{
+    font-size: 1rem;
+}
+/* Main */
+body{
+    background-color: rgb(147,183,187 );
+}
+main{
+    grid-area: main;
+}
+.banner{
+    background-image:url(../img/Banner.jpeg);
+    height: 15vw;
+    background-size: contain;
+    margin: 1rem;
+}
+.sub{
+    margin: 1rem;
+    font-size:2rem;
+    color:rgb(57, 52, 154); 
+    text-align: center;
+}
+.proDest{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.proDest img{
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+}
+main div{
+    padding: 1rem;
+    background-color: white;
+    border-width: 0.2rem;
+    border-style: solid;
+    cursor: pointer;
+    color: rgb(57, 52, 154);
+    margin: 1rem ;
+}
+.flexMarcas{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.flexMarcas img{
+    width: 11rem;
+    height: 10rem;
+}
+.flexMarcas div{
+    margin: 1rem;
+    height: 13rem;
+} 
+.gridProduct{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: auto;
+    justify-items: center;
+    gap: 10px;
+}
+.gridProduct div {
+    width: 10rem;
+    height: 15.4rem;
+}
+.gridProduct div img{
+    width: 11rem;
+    height: 10rem
+}
+/* Formulario */
+.formulario{
+    display: flex;
+    justify-content: center;
+}
+.formulario input,select,textarea{
+    border: solid 2px aquamarine;
+    margin: 5px;
+    width: 20rem;
+}
+h4,.formulario h2{
+    color:rgb(57, 52, 154);
+}
+::placeholder { color: blue; }
+.parrafo{
+    margin: 1rem;
+    color: blue;
+}
+/* Footer */
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color:aquamarine;
+}
+footer ul li a{
+    background-color: rgb(68, 218, 173);
+    font-size: 1rem;
+    justify-content: space-between;
+    display: inline-block;
+}
+footer ul li{
+    display: inline-block;
+    padding-top: 1rem;
+    align-items: center;
+}
+/* Media */
+@media only screen and (max-width:768px){
+    .logo img{
+        width: 3rem;
+        height: 3rem;
+    }
+    .titulo{
+        font-size: 3rem;
+    }
+    .proDest div{
+        margin: 2rem;
+    }
+}
+@media only screen and (max-width:480px){
+    /* Header */
+    .titulo{
+    font-size:2.1rem;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    li{
+        display: inline;
+        margin: 0px;
+        font-size: 2rem;
+    }
+    .sub{
+        font-size: 1rem;
+    }
+    .banner{
+        height: 3.5rem;
+    } 
+    .proDest img{
+        width: 8rem;
+        height: 10rem;
+    }
+    footer ul li a{
+        font-size: 1rem;
+        margin: 1rem;
+        margin-bottom: 1rem;
+        align-items: center;
+    }
+    .gridProduct{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
